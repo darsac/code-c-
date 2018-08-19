@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void newLetter(char & n,int replace)
+{
+    n-=replace;
+}
+void DechiffrementCesar(string message,unsigned int chiffrement)
+{
+     for(int i=0;i<message.size();i++)
+    {
+        newLetter(message[i],chiffrement);
+         cout << message[i];
+    }  
+    cout <<endl;
+}
+int main()
+{
+    for(int j=1;j<=25;j++)
+    {
+        DechiffrementCesar("OLEUH",j); 
+    }
+}
